@@ -1,6 +1,7 @@
 <p align="center">
 </p>
-Ancient Gates Reloaded by peewi96 (1.8.3 Update by SeeMA)
+Ancient Gates Reloaded by peewi96 
+1.8.3 - Update by SeeMA
 ==================================================================
 Original Author: Olof Larsson
 
