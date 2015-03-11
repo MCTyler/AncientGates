@@ -4,13 +4,13 @@ import java.lang.reflect.Type;
 
 import org.bukkit.Location;
 import org.bukkit.World;
-import org.bukkit.craftbukkit.libs.com.google.gson.JsonDeserializationContext;
-import org.bukkit.craftbukkit.libs.com.google.gson.JsonDeserializer;
-import org.bukkit.craftbukkit.libs.com.google.gson.JsonElement;
-import org.bukkit.craftbukkit.libs.com.google.gson.JsonObject;
-import org.bukkit.craftbukkit.libs.com.google.gson.JsonParseException;
-import org.bukkit.craftbukkit.libs.com.google.gson.JsonSerializationContext;
-import org.bukkit.craftbukkit.libs.com.google.gson.JsonSerializer;
+import com.google.gson.JsonDeserializationContext;
+import com.google.gson.JsonDeserializer;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParseException;
+import com.google.gson.JsonSerializationContext;
+import com.google.gson.JsonSerializer;
 import org.mcteam.ancientgates.Plugin;
 
 public class LocationTypeAdapter implements JsonDeserializer<Location>, JsonSerializer<Location> {
