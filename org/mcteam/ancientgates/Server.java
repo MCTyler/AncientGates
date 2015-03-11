@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.TreeMap;
 import java.util.Map.Entry;
 
-import org.bukkit.craftbukkit.libs.com.google.gson.reflect.TypeToken;
+import com.google.gson.reflect.TypeToken;
 import org.mcteam.ancientgates.sockets.types.ConnectionState;
 import org.mcteam.ancientgates.util.DiscUtil;
 
