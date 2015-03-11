@@ -20,7 +20,7 @@ import java.util.TreeMap;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
-import org.bukkit.craftbukkit.libs.com.google.gson.reflect.TypeToken;
+import com.google.gson.reflect.TypeToken;
 
 import org.mcteam.ancientgates.util.DiscUtil;
 import org.mcteam.ancientgates.util.FloodUtil;
