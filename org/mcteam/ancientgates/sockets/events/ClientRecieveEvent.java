@@ -2,7 +2,7 @@ package org.mcteam.ancientgates.sockets.events;
 
 import java.net.Socket;
 
-import org.bukkit.craftbukkit.libs.com.google.gson.Gson;
+import com.google.gson.Gson;
 import org.mcteam.ancientgates.sockets.types.Packet;
 
 public class ClientRecieveEvent {
