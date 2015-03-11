@@ -45,7 +45,7 @@ public class CommandInfo extends BaseCommand {
 			// Find gate based on the player's line of sight
 			// NB :- getTargetBlock deprecation warnings suppressed until Bukkit API provides an alternative method
 			@SuppressWarnings("deprecation")
-			WorldCoord playerTargetCoord = new WorldCoord(player.getTargetBlock(null, 20));
+			WorldCoord playerTargetCoord = new WorldCoord(player.getTargetBlock((Set<Material>) null, 20));
 			gate = GateUtil.nearestGate(playerTargetCoord, false);
 			String from = GateUtil.nearestFrom(playerTargetCoord);
 			
