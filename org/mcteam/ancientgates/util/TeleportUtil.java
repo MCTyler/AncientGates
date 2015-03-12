@@ -3,7 +3,6 @@ package org.mcteam.ancientgates.util;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -196,11 +195,8 @@ public class TeleportUtil {
 				PluginMessage msg = new PluginMessage(event.getEntityType(), event.getEntity(), location);
 				// Send over the AGBungeeTele BungeeCord channel
 				if (Plugin.instance.getServer().getOnlinePlayers().size() > 0) {
-					Collection<? extends Player> players = Plugin.instance.getServer().getOnlinePlayers();
 					// Use any player to send the plugin message
-					for (Player player : players) {
-						player.sendPluginMessage(Plugin.instance, "BungeeCord", msg.toByteArray());
-					}
+					Iterables.getFirst(Bukkit.getOnlinePlayers(), null).sendPluginMessage(Plugin.instance, "BungeeCord", msg.toByteArray());
 					// Imitate teleport by removing entity
 					event.getEntity().remove();
 				}
@@ -463,13 +459,10 @@ public class TeleportUtil {
 						}
 					}
 					
-					Collection<? extends Player> players = Plugin.instance.getServer().getOnlinePlayers();
 
 					if (Plugin.instance.getServer().getOnlinePlayers().size() > 0) {
 						// Use any player to send the plugin message
-						for (Player player : players) {
-							player.sendPluginMessage(Plugin.instance, "BungeeCord", msg.toByteArray());
-						}
+						Iterables.getFirst(Bukkit.getOnlinePlayers(), null).sendPluginMessage(Plugin.instance, "BungeeCord", msg.toByteArray());
 				
 					// Imitate teleport by removing entity and vehicle
 						vehicle.eject();
