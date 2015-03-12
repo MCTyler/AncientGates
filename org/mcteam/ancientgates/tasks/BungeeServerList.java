@@ -4,7 +4,8 @@ import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.entity.Player;
 import org.mcteam.ancientgates.Plugin;
 import org.mcteam.ancientgates.util.types.PluginMessage;
-import java.util.Collection;
+
+import java.util.Iterator;
 
 public class BungeeServerList extends BukkitRunnable {
  
@@ -17,11 +18,8 @@ public class BungeeServerList extends BukkitRunnable {
 	@Override
 	public void run() {
 		if (plugin.getServer().getOnlinePlayers().size() == 0) return;
-		Collection<? extends Player> players = Plugin.instance.getServer().getOnlinePlayers();
 		// Send BungeeCord "GetServers" command
 		final PluginMessage msg = new PluginMessage("GetServers");
-		for (Player player : players) {
-		player.sendPluginMessage(plugin, "BungeeCord", msg.toByteArray());
-		}
+		Iterables.getFirst(Bukkit.getOnlinePlayers(), null).sendPluginMessage(plugin, "BungeeCord", msg.toByteArray());
 	}
 }
