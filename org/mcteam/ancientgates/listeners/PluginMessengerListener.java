@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.util.Calendar;
+import java.util.Collection;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
