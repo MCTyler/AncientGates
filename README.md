@@ -5,7 +5,7 @@ Ancient Gates Reloaded by peewi96
 ==================================================================
 Original Author: Olof Larsson
 
-- Latest build: 
+- Latest build: <a href="http://www.file-upload.net/download-10408375/AncientGates.jar.html">AncientGates.jar</a>
 
 <p align="center">
 <img src="http://api.mcstats.org/signature/AncientGates.png" />
