@@ -1,6 +1,5 @@
 package org.mcteam.ancientgates.tasks;
 
-import java.util.Iterator;
 import java.util.List;
 import java.util.Iterator;
 
@@ -27,9 +26,7 @@ public class BungeeMessage extends BukkitRunnable {
 
 	    while (it.hasNext()) {
 	        PluginMessage msg = it.next();
-
 			Iterables.getFirst(Bukkit.getOnlinePlayers(), null).sendPluginMessage(plugin, "BungeeCord", msg.toByteArray());
-
 			// Remove from queue
 			it.remove();
 		}
