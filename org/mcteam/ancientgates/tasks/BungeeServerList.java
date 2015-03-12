@@ -14,11 +14,12 @@ public class BungeeServerList extends BukkitRunnable {
  
 	@Override
 	public void run() {
-		if (plugin.getServer().getOnlinePlayers().length == 0) return;
-		
+		if (plugin.getServer().getOnlinePlayers().size() == 0) return;
+		Collection<? extends Player> players = Plugin.instance.getServer().getOnlinePlayers();
 		// Send BungeeCord "GetServers" command
 		final PluginMessage msg = new PluginMessage("GetServers");
-		plugin.getServer().getOnlinePlayers()[0].sendPluginMessage(plugin, "BungeeCord", msg.toByteArray());
-	}
+		for (Player player : players) {
+		player.sendPluginMessage(plugin, "BungeeCord", msg.toByteArray());
+		}
 	
 }
