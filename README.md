@@ -1,10 +1,8 @@
-<p align="center">
-</p>
-Ancient Gates Reloaded by peewi96 
+
 Ancient Gates Reloaded
 ==================================================================
 Original Author: Olof Larsson
-
+Ancient Gates Reloaded by peewi96
 1.8.3 - Update by SeeMA
 
 - Latest build: <a href="http://www.file-upload.net/download-10408375/AncientGates.jar.html">AncientGates.jar</a>
