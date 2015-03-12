@@ -3,6 +3,7 @@ package org.mcteam.ancientgates.util;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -194,7 +195,7 @@ public class TeleportUtil {
 				// Send AGBungeeSpawn packet
 				PluginMessage msg = new PluginMessage(event.getEntityType(), event.getEntity(), location);
 				// Send over the AGBungeeTele BungeeCord channel
-				if (Plugin.instance.getServer().getOnlinePlayers().length > 0) {
+				if (Plugin.instance.getServer().getOnlinePlayers().size() > 0) {
 					Collection<? extends Player> players = Plugin.instance.getServer().getOnlinePlayers();
 					// Use any player to send the plugin message
 					for (Player player : players) {
