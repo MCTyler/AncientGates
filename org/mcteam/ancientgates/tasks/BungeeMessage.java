@@ -2,6 +2,7 @@ package org.mcteam.ancientgates.tasks;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.Collection;
 
 import org.bukkit.scheduler.BukkitRunnable;
 
@@ -18,7 +19,7 @@ public class BungeeMessage extends BukkitRunnable {
  
 	@Override
 	public void run() {
-		if (plugin.getServer().getOnlinePlayers().length == 0) return;
+		if (plugin.getServer().getOnlinePlayers().size() == 0) return;
 		
 	    List<PluginMessage> msgQueue = Plugin.bungeeMsgQueue;
 	    Iterator<PluginMessage> it = msgQueue.iterator();
