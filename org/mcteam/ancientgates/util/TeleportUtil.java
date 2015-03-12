@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Level;
 
+import com.google.common.collect.Iterables;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Chunk;
 import org.bukkit.Location;
