@@ -470,7 +470,6 @@ public class TeleportUtil {
 						for (Player player : players) {
 							player.sendPluginMessage(Plugin.instance, "BungeeCord", msg.toByteArray());
 						}
-					}
 				
 					// Imitate teleport by removing entity and vehicle
 						vehicle.eject();
