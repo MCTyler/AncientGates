@@ -21,5 +21,5 @@ public class BungeeServerList extends BukkitRunnable {
 		for (Player player : players) {
 		player.sendPluginMessage(plugin, "BungeeCord", msg.toByteArray());
 		}
-	
+	}
 }
