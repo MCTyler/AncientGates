@@ -323,11 +323,16 @@ public class PluginMessengerListener implements PluginMessageListener {
 
 			// Send response back if a player is online, otherwise queue
 			if (response != null) {
-				PluginMessage rMsg = new PluginMessage("Message", player, Conf.colorSystem+response);
-				if (Plugin.instance.getServer().getOnlinePlayers().length == 0) {
+			Collection<? extends Player> players = Plugin.instance.getServer().getOnlinePlayers();
+			PluginMessage rMsg = new PluginMessage("Message", player, Conf.colorSystem+response);
+				
+				if (Plugin.instance.getServer().getOnlinePlayers().size() == 0) {
 					Plugin.bungeeMsgQueue.add(rMsg);
 				} else {
-					Plugin.instance.getServer().getOnlinePlayers()[0].sendPluginMessage(Plugin.instance, "BungeeCord", rMsg.toByteArray());
+					for (Player aktplayer : players) {
+						aktplayer.sendPluginMessage(Plugin.instance, "BungeeCord", rMsg.toByteArray());
+					}
+					
 				}
 			}
 		// Parse BungeeCord server name packet
