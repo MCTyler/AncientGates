@@ -3,6 +3,7 @@ package org.mcteam.ancientgates.tasks;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.mcteam.ancientgates.Plugin;
 import org.mcteam.ancientgates.util.types.PluginMessage;
+import java.util.Collection;
 
 public class BungeeServerName extends BukkitRunnable {
  
