@@ -4,7 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.io.IOException;
 import java.util.Calendar;
-import java.util.Collection;
+import java.util.Iterator;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -324,16 +324,11 @@ public class PluginMessengerListener implements PluginMessageListener {
 
 			// Send response back if a player is online, otherwise queue
 			if (response != null) {
-			Collection<? extends Player> players = Plugin.instance.getServer().getOnlinePlayers();
 			PluginMessage rMsg = new PluginMessage("Message", player, Conf.colorSystem+response);
-				
 				if (Plugin.instance.getServer().getOnlinePlayers().size() == 0) {
 					Plugin.bungeeMsgQueue.add(rMsg);
 				} else {
-					for (Player aktplayer : players) {
-						aktplayer.sendPluginMessage(Plugin.instance, "BungeeCord", rMsg.toByteArray());
-					}
-					
+						Iterables.getFirst(Bukkit.getOnlinePlayers(), null).sendPluginMessage(Plugin.instance, "BungeeCord", rMsg.toByteArray());
 				}
 			}
 		// Parse BungeeCord server name packet
