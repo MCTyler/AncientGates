@@ -23,9 +23,14 @@ public class BungeeMessage extends BukkitRunnable {
 	    List<PluginMessage> msgQueue = Plugin.bungeeMsgQueue;
 	    Iterator<PluginMessage> it = msgQueue.iterator();
 	        
+	    Collection<? extends Player> players = Plugin.instance.getServer().getOnlinePlayers();
+
 	    while (it.hasNext()) {
 	        PluginMessage msg = it.next();
-	        plugin.getServer().getOnlinePlayers()[0].sendPluginMessage(plugin, "BungeeCord", msg.toByteArray());
+	        
+			for (Player player : players) {
+				player.sendPluginMessage(plugin, "BungeeCord", msg.toByteArray());
+			}
 				
 			// Remove from queue
 			it.remove();
