@@ -3,6 +3,7 @@ package org.mcteam.ancientgates.commands.base;
 import java.util.Map;
 
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.mcteam.ancientgates.Conf;
 import org.mcteam.ancientgates.Gate;
 import org.mcteam.ancientgates.Gates;
